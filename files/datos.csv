@@ -1,0 +1,4 @@
+facility,readmission,program,visit_date,comment
+Hongkong CURA Healthcare Center,true,medicare,07/04/2021,test comment 001
+Hongkong CURA Healthcare Center,false,medicaid,07/04/2021,test comment 002
+Seoul CURA Healthcare Center,true,none,07/04/2021,test comment 003
