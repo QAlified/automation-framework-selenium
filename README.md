@@ -1,6 +1,6 @@
 # Selenium Template
 
-El proyecto consiste en un framework de automatización de pruebas basado en Selenium webDriver que sirve como punto de partida en cualquier proyecto de automatización de pruebas web UI.
+El proyecto consiste en un framework de automatización de pruebas basado en Selenium WebDriver que sirve como punto de partida en cualquier proyecto de automatización de pruebas web UI.
 
 Este framework provee todas las funcionalidades necesarias para abordar la automatización de pruebas web con Selenium de una forma estándar, reduciendo tiempos de configuración y construcción, minimizando la curva de aprendizaje y el nivel técnico requerido para su uso.
 
@@ -19,7 +19,7 @@ Requisitos necesarios para el correcto funcionamiento del template y cómo insta
 * [TestNG](https://testng.org/doc/download.html), disponible también desde el  _Marketplace_  de Eclipse. 
 
 
-Mira **Instalación** para conocer como intalar y comenzar a utilizar el proyecto.
+Mira **Instalación** para conocer como instalar y comenzar a utilizar el proyecto.
 
 
 ### Instalación 🔧
@@ -34,12 +34,12 @@ A continuación se describen los pasos para descargar e instalar el template en 
 
 A continuación de presenta información y ejemplos que detallan cómo comenzar a crear las pruebas automatizadas usando las clases del template.
 
-Si ya estas familiarizad@ con los conceptos de Java, Selenium y POO, te invitamos a analizar y comprender la estructura de clases y packetes del template.
+Si ya estás familiarizad@ con los conceptos de Java, Selenium y POO, te invitamos a analizar y comprender la estructura de clases y packetes del template.
 
 
 ### Primeros pasos
 
-Comenzamos creando nuestra primer clase de pruebas utilizando la opción  _File > New > Class_ . Esta clase de pruebas contendrá los distintos métodos de prueba que se vayan generando en el proyecto
+Comenzamos creando nuestra primer clase de pruebas utilizando la opción  _File > New > Class_ . Esta clase de pruebas contendrá los distintos métodos de prueba que se vayan generando en el proyecto.
 
 Recomendamos que las clases de prueba extiendan de la clase  _ TestBase _  donde se resuelve la creación del driver y el manejador de propiedades de forma totalmente automática.
  
@@ -66,7 +66,7 @@ public class MyFirstTestClass extends TestBase {
 }
 ```
 
-Utilizando el objeto  _WebAutomator_  heredado de la clase TestBase podremos acceder a las principales funcionalidades de navegación del template. En el siguiente ejemplo se muestra el código para acceder a una determinada dirección URL, navegar hacia atras y adelante, refrescar la página y cerrar el navegador.
+Utilizando el objeto  _WebAutomator_  heredado de la clase TestBase podremos acceder a las principales funcionalidades de navegación del template. En el siguiente ejemplo se muestra el código para acceder a una determinada dirección URL, navegar hacia atrás y adelante, refrescar la página y cerrar el navegador.
 
 ```java
 package test;
@@ -155,13 +155,13 @@ Agregar la clase recién creada al archivo  _testng.xml_
 
 ```
 
-Los parametros  _browser_  y  _max_wait_  se_ utilizan para establecer el navegador y tiempos de espera durante las pruebas.
+Los parámetros  _browser_  y  _max_wait_  se_ utilizan para establecer el navegador y tiempos de espera durante las pruebas.
 El parámetro  _close_browser_after_execution_  permite indicar si se debe cerrar el navegador tras la ejecución de la prueba.
 
 ### Especificación
 
 **WebAutomator**
-La clase  _WebAutomator_  encapsula y extiende toda la funcionalidad de la clase  _WebDriver_  de Selenium y brinda mecanismos más eficientes para la interacción con el navegador y la web. A su vez, resuelte automaticamente los tiempos de espera aplicando  _ExplicitWaits_  al momento de interactuar con los elementos HTML.
+La clase  _WebAutomator_  encapsula y extiende toda la funcionalidad de la clase  _WebDriver_  de Selenium y brinda mecanismos más eficientes para la interacción con el navegador y la web. A su vez, resuelve automaticamente los tiempos de espera aplicando  _ExplicitWaits_  al momento de interactuar con los elementos HTML.
 
 | Método        | Descripción           |
 | ------------- |---------------|
@@ -185,7 +185,7 @@ La clase  _WebAutomator_  encapsula y extiende toda la funcionalidad de la clase
 | public void `takeScreenshot()` | Realiza una captura de pantalla y la almacena en formato .png |
 
 **UIElement**
-La clase  _UIElement_  sustituye a la clase  _WebElement_  de selenium y encapsula toda la funcionalidad sobre la interacción de los elementos de la UI web. 
+La clase  _UIElement_  sustituye a la clase  _WebElement_  de Selenium encapsula toda la funcionalidad sobre la interacción de los elementos de la UI web. 
 
 | Método        | Descripción           |
 | ------------- |---------------|
@@ -212,11 +212,11 @@ La clase  _UIElement_  sustituye a la clase  _WebElement_  de selenium y encapsu
 **Otras funcionalidades**
 
  * _CSVHandler_ : Manejo de Archivos .CSV y Excel.
- * _PropertiesHandler_ : Manejo de Properties Java. Por ejemplo, para el manejo de datos y parametrización de pruebas
- * _CiGenerator_ : Generador de cédulas con números random
- * _DBConnector_ : Conexión de Base de Datos
- * _PostgresConnector_ : Conexión de base de Datos Postgres
- * _DataBaseHandler_ : Manejo de Base de Datos
+ * _PropertiesHandler_ : Manejo de Properties Java. Por ejemplo, para el manejo de datos y parametrización de pruebas.
+ * _CiGenerator_ : Generador de cédulas con números random.
+ * _DBConnector_ : Conexión de base de datos.
+ * _PostgresConnector_ : Conexión de base de datos Postgres.
+ * _DataBaseHandler_ : Manejo de base de datos.
  * _MailConnector_ : Conexión de email con distintos protocolos.
  * _MailHandler_ : Manejo de Email, ejemplo para leer y analizar email.
  * __ 
@@ -229,11 +229,12 @@ La clase  _UIElement_  sustituye a la clase  _WebElement_  de selenium y encapsu
 
 ## Autores ✒️
 
-* **QAlified Automation team**
+* **QAlified**
 
 ## Contacto 📢
 
-info@qalified.com o automation@qalified.com
+https://qalified.com/
+info@qalified.com
 
 ---
 ⌨️ con ❤️ por QAlified
