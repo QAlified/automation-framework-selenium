@@ -229,8 +229,8 @@ La clase  _UIElement_  sustituye a la clase  _WebElement_  de Selenium encapsula
 
 ## Autores ✒️
 
+[**QAlified**](https://qalified.com/)
 * **QAlified**
-https://qalified.com/
 
 ## Contacto 📢
 
