@@ -16,10 +16,7 @@ Requisitos necesarios para el correcto funcionamiento del template y cómo insta
 
 * Java 
 * IDE de preferencia como por ejemplo, [Eclipse IDE](https://www.eclipse.org/)
-* [TestNG](https://testng.org/doc/download.html), disponible también desde el  _Marketplace_  de Eclipse. 
-
-
-Mira **Instalación** para conocer como instalar y comenzar a utilizar el proyecto.
+* [TestNG](https://testng.org/doc/download.html), disponible también desde el  _Marketplace_  de Eclipse.
 
 
 ### Instalación 🔧
@@ -219,7 +216,6 @@ La clase  _UIElement_  sustituye a la clase  _WebElement_  de Selenium encapsula
  * _DataBaseHandler_ : Manejo de base de datos.
  * _MailConnector_ : Conexión de email con distintos protocolos.
  * _MailHandler_ : Manejo de Email, ejemplo para leer y analizar email.
- * __ 
 
 ## Construido con 🛠️
 
