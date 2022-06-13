@@ -23,12 +23,12 @@ public class TestBase {
 	
 	
 	@BeforeMethod
-	@Parameters({"browser", "max_wait"})
-	public void setUpDriver(@Optional("CHROME") String browser, @Optional("30") long max_wait) throws Exception 
+	@Parameters({"browser","isHeadless", "max_wait"})
+	public void setUpDriver(@Optional("CHROME") String browser, Boolean isHeadless, @Optional("30") long max_wait) throws Exception 
 	{
 		//Initialize WebDriver
 		Browser b = Browser.valueOf(browser);
-		automator = new WebAutomator(b,true, true, max_wait);
+		automator = new WebAutomator(b,isHeadless, true, max_wait);
 		//Initialize property Manager
 		mp = new PropertiesHandler();
 	}

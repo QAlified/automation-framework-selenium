@@ -6,7 +6,6 @@ import static org.testng.Assert.assertTrue;
 import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.By;
 
-import automation.UIElement;
 import automation.WebAutomator;
 
 public class WorkWithLogin {
@@ -22,6 +21,7 @@ public class WorkWithLogin {
 	private By inputUsername = By.id("txt-username");
 	private By inputPassoword = By.id("txt-password");
 	private By buttonMakeAppoint = By.id("btn-make-appointment");
+	private By titleMakeAppointment = By.xpath("//h2[contains(text(),'Make Appointment')]");
 	
 	
 	//Logger
@@ -41,16 +41,25 @@ public class WorkWithLogin {
 		this.automator.find(link_contact).click();
 	}
 	
-    public void contactInformation(String name, String msg){  
-        this.automator.waitUntilVisible(input_name); 
+	public void setName(String name){
+		this.automator.waitUntilVisible(input_name); 
         logger.info("The person's name is entered - {}", name);
         this.automator.find(input_name).setText(name); 
-        
-        this.automator.waitUntilVisible(textArea_msg); 
-        logger.info("The message is entered - {}", msg);		
-		this.automator.find(textArea_msg).setText(msg);
-    }
+		
+	}
 	
+	public void setMessage(String message){
+        this.automator.waitUntilVisible(textArea_msg); 
+        logger.info("The message is entered - {}", message);		
+		this.automator.find(textArea_msg).setText(message);
+	}
+	
+    public void contactInformation(String name, String message){  
+       this.setName(name);
+       this.setMessage(message);
+    }
+    
+    
     
     //CURA Healthcare Service
     public void clickMakeAppointment(){
@@ -58,21 +67,28 @@ public class WorkWithLogin {
 		logger.info("Click on the MakeAppoint button");
 		this.automator.find(buttonMakeAppoint).click();
 	}
+
+    public void setUsername(String username) {
+	  this.automator.waitUntilVisible(inputUsername); 
+      logger.info("The person's username is entered - {}", username);
+      this.automator.find(inputUsername ).setText(username); 	
+    }
     
-    public void clickLoginCURA(){
-		this.automator.waitUntilClickable(buttonLogin);
-		logger.info("Click on the Login button");
-		this.automator.find(buttonLogin).click();
-	}
+    public void setPassword(String password) {
+    	this.automator.waitUntilVisible(inputPassoword); 
+        logger.info("The person's password is entered");		
+  		this.automator.find(inputPassoword).setText(password);   	
+    }
+    
+    public void clickLogin(){
+  		this.automator.waitUntilClickable(buttonLogin);
+  		logger.info("Click on the Login button");
+  		this.automator.find(buttonLogin).click();
+  	}
     
     public void loginCURA(String username, String password){  
-        this.automator.waitUntilVisible(inputUsername); 
-        logger.info("The person's username is entered - {}", username);
-        this.automator.find(inputUsername ).setText(username); 
-        
-        this.automator.waitUntilVisible(inputPassoword); 
-        logger.info("The person's password is entered");		
-		this.automator.find(inputPassoword).setText(password);
+       this.setUsername(username);
+       this.setPassword(password);
     }
     
     
@@ -85,4 +101,7 @@ public class WorkWithLogin {
 		assertTrue(this.automator.find(textArea_msg).isDisplayed(), "The 'Message' field is empty");
 	}
 
+	public void verifyLogin() {
+		assertTrue(this.automator.find(titleMakeAppointment).isDisplayed(), "Sign in not successful");
+	}
 }

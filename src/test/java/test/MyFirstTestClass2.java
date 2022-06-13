@@ -27,7 +27,8 @@ public class MyFirstTestClass2 extends TestBase {
 		WorkWithLogin LoginCURA = new WorkWithLogin(automator);
 		LoginCURA.clickMakeAppointment();
 		LoginCURA.loginCURA(mp.getProp("loginCURAUser"), mp.getProp("loginCURAPass"));
-		LoginCURA.clickLoginCURA();
+		LoginCURA.clickLogin();
+		LoginCURA.verifyLogin();
 		 
 	}
 	

@@ -6,6 +6,7 @@
 	
 	<parameter name="browser" value="CHROME" />
 	<parameter name="max_wait" value="30" />
+	<parameter name="isHeadless" value="true" />
 	<parameter name="close_browser_after_execution" value="false" />
 
 	<test thread-count="5" name="testSuite-test">
