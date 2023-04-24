@@ -119,3 +119,13 @@
 [INFO ] 2022-03-27 14:53:36.658 [main] WorkWithLogin - The person's password is entered
 [INFO ] 2022-03-27 14:53:36.794 [main] WorkWithLogin - Click on the Login button
 [INFO ] 2022-03-27 14:53:37.232 [main] WebAutomator - The active WebDriver closes
+[INFO ] 2023-04-24 14:46:29.517 [main] MyFirstTestClass - Navigate to the url of QAlified https://qalified.com/
+[INFO ] 2023-04-24 14:46:35.608 [main] WorkWithLogin - The person's name is entered - James Bond
+[INFO ] 2023-04-24 14:46:35.712 [main] WorkWithLogin - The message is entered - My name is Bond, James Bond...
+[INFO ] 2023-04-24 14:46:35.816 [main] WebAutomator - The active WebDriver closes
+[INFO ] 2023-04-24 14:46:36.647 [main] MyFirstTestClass2 - Navigate to the url of CURA Healthcare Servicehttps://katalon-demo-cura.herokuapp.com
+[INFO ] 2023-04-24 14:46:38.788 [main] WorkWithLogin - Click on the MakeAppoint button
+[INFO ] 2023-04-24 14:46:39.062 [main] WorkWithLogin - The person's username is entered - John Doe
+[INFO ] 2023-04-24 14:46:39.121 [main] WorkWithLogin - The person's password is entered
+[INFO ] 2023-04-24 14:46:39.194 [main] WorkWithLogin - Click on the Login button
+[INFO ] 2023-04-24 14:46:39.594 [main] WebAutomator - The active WebDriver closes
