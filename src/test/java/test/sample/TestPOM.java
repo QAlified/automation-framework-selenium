@@ -1,6 +1,8 @@
 package test.sample;
 
 
+import java.time.Duration;
+
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -22,7 +24,7 @@ public class TestPOM extends TestBase {
 	@Test
 	@Parameters({"testUrl"})
 	public void testLogin(String testUrl) throws Exception {
-		automator = new WebAutomator(Browser.CHROME,true, false, 30);
+		automator = new WebAutomator(Browser.CHROME,true, false, Duration.ofSeconds(30));
 		this.getAutomator().goTo(testUrl);
 		this.automator.maximizeWindows();
 		this.mp.loadProperties("credentials");

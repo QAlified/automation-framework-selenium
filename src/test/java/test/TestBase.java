@@ -1,5 +1,7 @@
 package test;
 
+import java.time.Duration;
+
 import org.apache.logging.log4j.LogManager;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -24,7 +26,7 @@ public class TestBase {
 	
 	@BeforeMethod
 	@Parameters({"browser","isHeadless", "max_wait"})
-	public void setUpDriver(@Optional("CHROME") String browser, Boolean isHeadless, @Optional("30") long max_wait) throws Exception 
+	public void setUpDriver(@Optional("CHROME") String browser, Boolean isHeadless, @Optional("30") Duration max_wait) throws Exception 
 	{
 		//Initialize WebDriver
 		Browser b = Browser.valueOf(browser);
@@ -33,7 +35,7 @@ public class TestBase {
 		mp = new PropertiesHandler();
 	}
 	
-	public void setUpDriverParaIncognito(String browser, @Optional("30") long max_wait) throws Exception 
+	public void setUpDriverParaIncognito(String browser, @Optional("30") Duration max_wait) throws Exception 
 	{
 		logger.info("Se abre un nuevo driver con el navegador incognito");
 		Browser b = Browser.valueOf(browser);

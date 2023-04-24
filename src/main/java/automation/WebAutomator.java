@@ -1,5 +1,6 @@
 package automation;
 import java.io.File;
+import java.time.Duration;
 import java.util.Set;
 
 import org.apache.logging.log4j.LogManager;
@@ -37,10 +38,9 @@ public class WebAutomator {
     private static final org.apache.logging.log4j.Logger logger=LogManager.getLogger(WebAutomator.class);
 	
     @SuppressWarnings("deprecation")
-	public WebAutomator(Browser browser,boolean isHeadless, boolean isIncognito, long max_wait) throws NoValidBrowserException {
+	public WebAutomator(Browser browser,boolean isHeadless, boolean isIncognito, Duration max_wait) throws NoValidBrowserException {
 		switch (browser) {
-		case CHROME:		
-			DesiredCapabilities capabilitiesChrome = DesiredCapabilities.chrome();
+		case CHROME: {		
 			ChromeOptions options = new ChromeOptions();
 			if(isHeadless) {
 				options.addArguments("--headless", "--window-size=1920,1200");
@@ -48,31 +48,35 @@ public class WebAutomator {
 			if(isIncognito) {
 				options.addArguments("--incognito");
 			}
-			capabilitiesChrome.setCapability(ChromeOptions.CAPABILITY, options);
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver(capabilitiesChrome);
+			ChromeDriver driver = new ChromeDriver(options);
 			break;
-			
-		case FIREFOX:
+		}
+		case FIREFOX:{			
 			DriverManagerType  firefox = DriverManagerType.FIREFOX;
-			WebDriverManager.getInstance(firefox).setup();			
-			driver = new FirefoxDriver();
+			WebDriverManager.firefoxdriver().setup();		
+			FirefoxDriver driver = new FirefoxDriver();
 			break;
+		}
 			
-		case EDGE:
+		case EDGE:{
 			DriverManagerType edge = DriverManagerType.EDGE;
-			WebDriverManager.getInstance(edge).setup();			
-			driver = new EdgeDriver();
+			WebDriverManager.edgedriver().setup();	
+			EdgeDriver driver = new EdgeDriver();
 			break;
+		}
 			
-		case IEXPLORER:
+		case IEXPLORER:{
 			DriverManagerType iexplore = DriverManagerType.IEXPLORER;
-			WebDriverManager.getInstance(iexplore).setup();			
-			driver = new InternetExplorerDriver();
+			WebDriverManager.iedriver().setup();		
+			InternetExplorerDriver driver = new InternetExplorerDriver();
 			break;
+		}
+			
 			
 		default:
 			throw new NoValidBrowserException(browser.toString());
+			
 		}
 		wait = new WebDriverWait(driver, max_wait);
 	}

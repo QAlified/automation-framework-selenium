@@ -1,4 +1,5 @@
 package test.sample;
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,7 +20,7 @@ public class LoginDemo2_1 {
 	public void login() {
 		System.setProperty("webdriver.chrome.driver", driverPath);
 		driver = new ChromeDriver();
-		wait = new WebDriverWait(driver, 30);
+		wait = new WebDriverWait(driver,Duration.ofSeconds(30));
 		driver.manage().window().maximize();
 		driver.get(url);
 		
