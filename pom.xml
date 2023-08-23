@@ -77,7 +77,42 @@
                 <version>1.2.2</version>
                 <scope>test</scope>
         </dependency>
-
+        
+        <dependency>
+      			<groupId>com.googlecode.json-simple</groupId>
+      			<artifactId>json-simple</artifactId>
+      			<version>1.1.1</version>
+   		</dependency>
+   		
+   		<dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>2.15.2</version>
+        </dependency>
+		<dependency>
+		    <groupId>com.aventstack</groupId>
+		    <artifactId>extentreports</artifactId>
+		    <version>5.0.9</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.freemarker</groupId>
+		    <artifactId>freemarker</artifactId>
+		    <version>2.3.30</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+		<dependency>
+		    <groupId>io.appium</groupId>
+		    <artifactId>java-client</artifactId>
+		    <version>8.5.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/androidx.test.uiautomator/uiautomator -->
+		<dependency>
+		    <groupId>androidx.test.uiautomator</groupId>
+		    <artifactId>uiautomator</artifactId>
+		    <version>2.2.0</version>
+		    <scope>runtime</scope>
+		</dependency>
+		
 	</dependencies>   
 	
 	<build>
@@ -87,8 +122,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.3.2</version>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 			<plugin>

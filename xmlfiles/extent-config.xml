@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <!-- report theme -->
+        <!-- standard, dark -->
+        <theme>dark</theme>
+    
+        <!-- enables timeline -->
+        <!-- defaults to true -->
+        <enableTimeline>true</enableTimeline>
+	
+        <!-- document encoding -->
+        <!-- defaults to UTF-8 -->
+        <encoding>UTF-8</encoding>
+        
+        <!-- protocol for script and stylesheets -->
+        <!-- defaults to https -->
+        <protocol>https</protocol>
+        
+        <!-- title of the document -->
+        <documentTitle>QALified Report</documentTitle>
+
+        <!-- custom javascript -->
+        <scripts>
+
+			<![CDATA[
+			
+			$(document).ready(function() {
+			
+			
+			]]>
+			
+		</scripts>
+			
+			<!-- custom styles -->
+			
+		<styles>
+			
+			<![CDATA[
+			
+			
+			]]>
+			
+		</styles>
+    </configuration>
+</extentreports>

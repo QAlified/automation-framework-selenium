@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite_Demo">
-	<parameter name="host" value="https://qalified.com/" />
-	<parameter name="testUrl" value="https://katalon-demo-cura.herokuapp.com" />
-	
-	<parameter name="browser" value="CHROME" />
-	<parameter name="max_wait" value="30" />
-	<parameter name="isHeadless" value="true" />
-	<parameter name="close_browser_after_execution" value="false" />
-
-	<test thread-count="5" name="testSuite-test">
-		<classes>
-			<class name="test.MyFirstTestClass" />
-			<class name="test.MyFirstTestClass2" />
-		</classes>
-	</test>
-</suite> <!-- Suite -->
+ <suite name="Coleccion de Test Suites"  >  
+            <suite-files>
+                   <suite-file path="./configSuites/firstClassSuite.xml" />
+                   <suite-file path="./configSuites/loginSuite.xml" />
+                   <suite-file path="./configSuites/myFirstTestSuite.xml" />
+                   <suite-file path="./configSuites/reservationSuite.xml" />
+                   <suite-file path="./configSuites/sampleDemoSuite.xml" />
+                   <suite-file path="./configSuites/testPOMSuite.xml" />
+                   <suite-file path="./configSuites/testWebinarSuite.xml" />
+            </suite-files>
+    </suite>

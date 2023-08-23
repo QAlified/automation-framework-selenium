@@ -1,0 +1,10 @@
+{
+"URLCura":"https://katalon-demo-cura.herokuapp.com",
+"URLQAlified":"https://qalified.com/",
+"testParams":{ 
+	"isHeadless":"false",
+	"close_browser_after_execution":"true",
+	"max_wait":"30",
+	"browser":"CHROME"
+	}
+}
