@@ -103,7 +103,7 @@
 		<dependency>
 		    <groupId>io.appium</groupId>
 		    <artifactId>java-client</artifactId>
-		    <version>8.5.1</version>
+		    <version>9.1.0</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/androidx.test.uiautomator/uiautomator -->
 		<dependency>
